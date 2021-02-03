@@ -31,24 +31,19 @@ body{
 	border-right:1px solid #33333c64;
 	box-sizing:border-box;
 }
-.X-cell::after, .O-cell::after{
-	content:"X";
-	color:#309fff;
-	font-size:1.3rem;
-	display:block;
-	width:100%;
-	text-align:center;
-	font-weight:bold;
+.X-cell, .O-cell{
+	background-image:url("https://vandung2kk2.github.io/caro/caro.png");
+	background-size:cover;
+	background-position:-0.12rem;
 }
-.O-cell::after{
-	color:#ff4444;
-	content:"Y";
+.O-cell{
+	background-position:1.96rem;
 }
 .X-cell.last-move{
-	background:#309fff60;
+	background-color:#309fff60;
 }
 .O-cell.last-move{
-	background:#ff444460;
+	background-color:#ff444460;
 }
 
 
