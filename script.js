@@ -3,16 +3,16 @@ window.onload = function(){
 		turn = 0,
 		lastMove = 0;
 	board.innerHTML = drawBoard();
-	var boardMatx = new Array(50);
-	for(let i=0; i<50; i++){
-		boardMatx[i] = new Array(50).fill(0);
+	var boardMatx = new Array(40);
+	for(let i=0; i<40; i++){
+		boardMatx[i] = new Array(40).fill(0);
 	}
 
 	var cells = document.getElementsByClassName("cell");
 	var numCell = cells.length;
 	for(let i=0; i<numCell; i++){
 		cells[i].addEventListener("click", function(){
-			let position = [Math.floor(i/50),i%50];
+			let position = [Math.floor(i/40),i%40];
 			if(boardMatx[position[0]][position[1]]==0){
 				cells[lastMove].classList.remove("last-move");
 				if(turn%2==0) this.classList.add("X-cell");
@@ -41,14 +41,14 @@ window.onload = function(){
 				let row = pos[0] + direction[i][j][0],
 					col = pos[1] + direction[i][j][1];
 				let curPos;
-				if(row>=0 && row<50 && col>=0 && row<50){
+				if(row>=0 && row<40 && col>=0 && row<40){
 					curPos = [row, col];
 				}
 				//console.log(curPos);
 				while(boardMatx[curPos[0]][curPos[1]] == per){
 					row += direction[i][j][0];
 					col += direction[i][j][1];
-					if(row>=0 && row<50 && col>=0 && row<50){
+					if(row>=0 && row<40 && col>=0 && row<40){
 						curPos = [row, col];
 					}
 					n++;
@@ -64,10 +64,10 @@ window.onload = function(){
 }
 function drawBoard(board){
 	let text="";
-	for(let i=0; i<50; i++){
-		text += '<div id="row-'+(i+1)+'">';
-		for(let j=0; j<50; j++){
-			text += '<div class="cell pos-' + (10*i + j +1) +'"></div>';
+	for(let i=0; i<40; i++){
+		text += '<div>';
+		for(let j=0; j<40; j++){
+			text += '<div class="cell"></div>';
 		}
 		text += "</div>"
 	}

@@ -22,23 +22,30 @@ body{
 }
 #board > div{
 	flex-basis:2rem;
-	border-bottom:1px solid #ddd;
+	border-bottom:1px solid #eee;
 	display:flex;
 	flex-direction: row;
 }
 .cell{
 	flex-basis:2rem;
-	border-right:1px solid #33333c64;
+	border-right:1px solid #eee;
 	box-sizing:border-box;
-}
-.X-cell, .O-cell{
-	background-image:url("https://vandung2kk2.github.io/caro/caro.png");
+	background-image:url("./caro.png");
+	background-repeat:no-repeat;
 	background-size:cover;
-	background-position:-0.12rem;
-	opacity:0.85;
+	background-position:-0.12rem 1.9rem;
+	transition:background-position 0.2s, background-color 0.5s;
+	opacity:0.8;
+}
+.X-cell{
+	background-position:-0.12rem 0;
 }
 .O-cell{
-	background-position:1.96rem;
+	animation:tick 0.2s forwards;
+}
+@keyframes tick{
+	0%{background-position:-2.04rem -1.9rem;}
+	100%{background-position:-2.04rem 0;}
 }
 .X-cell.last-move{
 	background-color:#309fff60;
