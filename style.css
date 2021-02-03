@@ -22,7 +22,7 @@ body{
 }
 #board > div{
 	flex-basis:2rem;
-	border-bottom:1px solid #33333c64;
+	border-bottom:1px solid #ddd;
 	display:flex;
 	flex-direction: row;
 }
@@ -35,6 +35,7 @@ body{
 	background-image:url("https://vandung2kk2.github.io/caro/caro.png");
 	background-size:cover;
 	background-position:-0.12rem;
+	opacity:0.85;
 }
 .O-cell{
 	background-position:1.96rem;
