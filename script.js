@@ -20,7 +20,7 @@ window.onload = function(){
 				cells[i].classList.add("last-move");
 				lastMove = i;
 				boardMatx[position[0]][position[1]] = turn%2+1;
-				if(check([position[0],position[1]])) alert("win r";
+				if(check([position[0],position[1]])) alert("Win r!");
 				turn++;
 			}
 		})
