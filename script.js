@@ -7,7 +7,12 @@ window.onload = function(){
 	for(let i=0; i<40; i++){
 		boardMatx[i] = new Array(40).fill(0);
 	}
-
+	document.getElementById("play-btn").onclick = function(){
+		document.getElementById("all").classList.add("played");
+		setTimeout(function(){
+			document.getElementById("all").style.display = "none";
+		},1500)
+	}
 	var cells = document.getElementsByClassName("cell");
 	var numCell = cells.length;
 	for(let i=0; i<numCell; i++){
